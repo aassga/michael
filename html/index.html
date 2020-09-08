@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>SLOTTO GameLobby</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/favicon_ST.png" type="image/x-icon">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <div class="header">
+        <div class="mumbernew">
+          <div class="numberdata">
+            <ul>
+              <li>
+                <div class="people"><i class="far fa-user"></i></div>
+                <div class="number" id="account"></div>
+              </li>
+              <li>
+                <div class="jp"><img id="diamondimg" src="./../images/diamond.png" alt="alt"><img id="moneyimg" src="./../images/coin.png" alt="alt"></div>
+                <div class="money"><span id="diamond"></span><span id="money"></span></div><a id="jpbtn" href="javascript:;">
+                  <div></div></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="loginbox">
+          <ul>
+            <!-- 假登入-->
+            <!-- 假登入 end-->
+            <!-- 全螢幕btn-->
+            <li class="Screen">
+              <div class="fullbtn"><img id="fullScreen" src="./../images/full.png" alt="alt"></div>
+            </li>
+            <li id="logoutBtn">
+              <div class="logout"><a href="#"><img src="./../images/logout.png" alt="alt"></a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="Marqueebox">
+          <div class="Marquee">
+            <div class="Marqueeimg"><img src="./../images/marguee.png" alt="alt"></div>
+            <div class="Marqueenews">
+              <marquee id="marqueeDiv" direction="left"></marquee>
+            </div>
+          </div>
+          <div class="search">
+            <div>
+              <input class="searcher-text form-control rounded-pill search-input" id="search-input" type="search" placeholder="Search..." aria-label="Search"><i class="fas fa-search"></i>
+              <style id="m-search"></style>
+            </div>
+          </div>
+          <script type="text/javascript" src="./../../js/newsearch.js"></script>
+        </div>
+        <div class="Marqueenew">
+          <div class="gamebox searcher-land">
+            <ul id="slider"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="meunbox">
+          <div class="gamemenu" id="gameid"><a href="#"><img src="./../images/gamebtn.png" alt="alt"></a></div>
+          <div class="logopaymenu">
+            <ul>
+              <li><a href="#"><img src="./../images/labby_coin.png" alt="alt" width="200"></a></li>
+              <li><img src="./../images/logo.png" alt="alt" width="130"></li>
+            </ul>
+          </div>
+          <div class="setmenu" id="setid"><a href="#"><img src="./../images/setbtn.png" alt="alt"></a></div>
+        </div>
+        <div class="gamemenubox">
+          <ul>
+            <li id="game_0"><img src="./../images/AllTypebtn.png" alt="alt"></li>
+            <li id="game_1"><img src="./../images/SlotTypeBtn.png" alt="alt"></li>
+            <li id="game_2"><img src="./../images/ChipTypebtn.png" alt="alt"></li>
+            <li id="game_4"><img src="./../images/JpTypebtn.png" alt="alt"></li>
+          </ul>
+        </div>
+        <div class="setmenubox">
+          <ul>
+            <li>商城</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter2">修改密碼</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter">客訴問題</li>
+            <li id="score" data-toggle="modal" data-target="#exampleModalCenter3"> 查詢分數</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <!-- complain-->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title" id="exampleModalLongTitle">問題回饋</div>
+                <div class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></div>
+              </div>
+              <div class="modal-body">
+                <form style="width:100%;">
+                  <!-- Default radio-->
+                  <div class="form-check">
+                    <input class="form-check-input" id="mail" type="radio" name="mail" value="游戏问题">
+                    <label class="form-check-label" for="flexRadioDefault1">游戏问题</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="mail" type="radio" name="mail" value="代理欺骗">
+                    <label class="form-check-label" for="flexRadioDefault1">代理欺骗</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="mail" type="radio" name="mail" value="登入不了">
+                    <label class="form-check-label" for="flexRadioDefault1">登入不了</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="mail" type="radio" name="mail" value="代理投訴">
+                    <label class="form-check-label" for="flexRadioDefault1">代理投訴</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="mail" type="radio" name="mail" value="其他">
+                    <label class="form-check-label" for="flexRadioDefault1">其他</label>
+                  </div><br>
+                  <!-- Message input-->
+                  <div class="form-outline">
+                    <textarea class="form-message" id="info" placeholder="問題內容" rows="4" name="info"></textarea>
+                    <div class="form-notch">
+                      <div class="form-notch-leading" style="width: 9px;"></div>
+                      <div class="form-notch-middle" style="width: 60px;"></div>
+                      <div class="form-notch-trailing"></div>
+                    </div>
+                  </div>
+                  <!-- phone input-->
+                  <div class="form-outline">
+                    <input class="form-control" id="tel" type="text" placeholder="連絡電話" name="連絡電話">
+                  </div>
+                  <!-- Submit button-->
+                  <button class="btn btn-primary" id="send" type="button">送出</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fixpassword-->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title" id="exampleModalLongTitle">修改密碼</div>
+                <div class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></div>
+              </div>
+              <div class="modal-body">
+                <form style="width:100%;">
+                  <!-- oldPassword input-->
+                  <div class="form-outline">
+                    <input class="form-control" id="oldpassword" type="text" placeholder="輸入舊密碼" name="輸入舊密碼">
+                  </div>
+                  <!-- newPassword input-->
+                  <div class="form-outline">
+                    <input class="form-control" id="newpassword" type="text" placeholder="輸入新密碼" name="輸入新密碼">
+                  </div>
+                  <!-- checkPassword input-->
+                  <div class="form-outline">
+                    <input class="form-control" id="checkpassword" type="text" placeholder="確認新密碼" name="確認新密碼">
+                  </div>
+                  <!-- Submit button-->
+                  <button class="btn btn-primary" id="send2" type="button">送出</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- code-->
+        <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title" id="exampleModalLongTitle">查詢分數</div>
+                <div class="close" id="score_close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></div>
+              </div>
+              <div class="modal-body">
+                <!-- [2]-->
+                <form style="width:100%;">
+                  <!-- checkPassword input-->
+                  <div class="form-outline">
+                    <input class="form-control" id="code" type="text" placeholder="輸入驗證碼" name="code">
+                  </div>
+                  <!-- code-->
+                  <div class="form-group center"><span class="imgcode"><img id="codeimage"></span></div><br>
+                  <!-- Submit button-->
+                  <button class="btn btn-primary" id="send3" type="button" data-toggle="modal" data-target="#exampleModalCenter4">送出</button><span id="s3"></span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- score-->
+        <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="top: 12%; height: 85%;">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title" id="exampleModalLongTitle">分數紀錄</div>
+                <div class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></div>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <table id="show">
+                    <thead class="theadbox">
+                      <tr for="colFormLabelSm">
+                        <td>#</td>
+                        <td>设定分数</td>
+                        <td>之前分数</td>
+                        <td>之后分数</td>
+                        <td>日期时间</td>
+                      </tr>
+                    </thead>
+                    <tbody class="tbodybox" id="tbody"></tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" type="button" data-dismiss="modal">關閉</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loginBox loginWindow" id="loginBox">
+      <!-- login-->
+      <div class="bgblock loginWindow"></div><img class="loginWindow" src="./../images/slotto.png">
+      <ul class="login loginWindow">
+        <li class="loginWindow">
+          <div class="modal-title loginWindow">會員登入</div>
+        </li>
+        <li>
+          <input class="message loginWindow" id="accountInput" type="text" placeholder="帳號" value=""><i class="fas fa-caret-down loginWindow"></i>
+        </li>
+        <li class="loginWindow">
+          <input class="message loginWindow" id="passwordInput" type="password" placeholder="密碼" value="">
+        </li>
+        <li class="loginWindow" id="logBtn">
+          <button class="loginBtn loginWindow">登入</button>
+        </li>
+        <li class="loginWindow"><span class="loginWindow">忘記密碼？請聯系邀請您的專員為您服務。</span></li>
+      </ul>
+    </div>
+  </body>
+  <script type="text/javascript" src="./../../js/newsearch.js"></script>
+  <script type="text/javascript" src="../js/btn_action.js"></script>
+  <!--功能JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <!-- js-->
+  <script type="text/javascript" src="../js/variable.js"></script>
+  <script type="text/javascript" src="../js/asyn.js"></script>
+  <script type="text/javascript" src="../js/presentAccount.js"></script>
+  <script type="text/javascript" src="../js/modalControl.js"></script>
+  <script type="text/javascript" src="../js/fullScreen.js"></script>
+  <script type="text/javascript" src="../js/logout.js"></script>
+  <script type="text/javascript" src="../js/autoLogout.js"></script>
+  <script type="text/javascript" src="../js/marquee.js"></script>
+  <script type="text/javascript" src="../js/slider.js"></script>
+  <script type="text/javascript" src="../js/login.js"></script>
+  <script type="text/javascript" src="../js/gameClass.js"></script>
+  <script type="text/javascript" src="../js/complain.js"></script>
+  <script type="text/javascript" src="../js/fixpassword.js"></script>
+  <script type="text/javascript" src="../js/code.js"></script>
+  <script type="text/javascript" src="../js/getVersionNo.js"></script>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"  rel="stylesheet"/>
+<!-- Google Fonts -->
+<link  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"  rel="stylesheet"/>
+<!-- MDB -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css"  rel="stylesheet"/>
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+
+
+      <a href="http://192.168.3.105/test_SpecialEffects/codeScore.html"><button type="button" class="btn btn-primary btn-block mb-4" id="link">LINK</button></a>
+
+      <!--window-->
+      <button type="button" class="btn btn-primary btn-block mb-4" id="link" data-toggle="modal" data-target="#exampleModalCenter">window</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                
+
+                    <form style="width: 26rem;">
+
+                        <!-- Default radio -->
+                        <div class="form-check"><input class="form-check-input" type="radio" id='mail' name='mail' value="游戏问题"/>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                游戏问题
+                            </label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id='mail' name='mail' value="代理欺骗"/>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                代理欺骗
+                            </label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id='mail' name='mail' value="登入不了"/>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                登入不了
+                            </label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id='mail' name='mail' value="代理投訴"/>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                代理投訴
+                            </label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id='mail' name='mail' value="其他"/>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                其他
+                            </label>
+                            
+                        </div>
+
+                        <br/>
+
+                        <!-- Message input -->
+                        <div class="form-outline mb-4">
+                          <textarea class="form-control"  rows="4" id='info' name='info'></textarea>
+                          <label class="form-label" for="form4Example3" style="margin-left: 0px;">Message</label>
+                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div><div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
+                
+                        <!-- phone input -->
+                        <div class="form-outline mb-4">
+                            <input type="text"  class="form-control" id='tel' name='tel'>
+                            <label class="form-label" for="form4Example1" style="margin-left: 0px;">tel</label>
+                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div><div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
+                          
+                
+                        <!-- Submit button -->
+                        <button type="button" class="btn btn-primary btn-block mb-4" id="send">Send</button>
+                      </form>
+
+
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+      <script type="text/javascript">
+
+
+        $('#send').click(function(e){
+            e.preventDefault();
+
+            var form = $('form')[0];         
+            var formData = new FormData(form);
+
+            formData.append('token', "U2FsdGVkX1+5\/Ah8VCfFGDCe72yftSG1cmBUgCK8JntAqUyVKYbFnzMu4oh2A+3P");//token
+            formData.append('company', "nitest002");//company/player
+
+            /*
+            const object = {};
+
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            console.log(object)
+
+           */
+            $.ajax({
+
+                url: 'http://mango-api-test.cg11systems.com:8080/ali88_api/api/lobby/slotto/mail/mail.php',
+                
+                //url:'http://192.168.3.195/ali88_api/api/slotto/mail/mail.php',
+                type : "POST",
+                data : formData,
+                //contentType:'application/x-www-form-urlencoded;charset=UTF-8',               
+                contentType:false,
+                processData: false,
+                crossDomain: true,
+                success : function(data) 
+                {
+                    console.log("----------"+data);
+
+                    console.log('成功');
+
+                },error: function(data) 
+                {
+                    console.log("-----xxxxx-----");
+                    console.log('無法送出');
+                }
+            })
+        });
+
+    
+    </script>
+
+</body>
+</html>
