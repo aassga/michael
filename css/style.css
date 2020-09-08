@@ -718,7 +718,7 @@ a {
   z-index: 1;
 }
 .loginBox .login li {
-  line-height: 3em;
+  line-height: 3.5em;
 }
 .loginBox .login li:nth-child(1) {
   width: 95%;
