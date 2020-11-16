@@ -1,0 +1,58 @@
+extends ./_model.pug
+block append meta
+block append title
+  title SLOTTO GameLobby
+
+block append link 
+  link(rel='shortcut icon', href='../images/favicon_ST.png', type='image/x-icon') 
+  
+block header
+  include ./_header.pug
+  
+block content
+  include ./_content.pug
+
+block footer
+  include ./_footer.pug
+
+block login
+  // login
+  include ./_login.pug
+
+block modaldiv
+  // complain
+  include ./_modal/_complain.pug
+  // fixpassword
+  include ./_modal/_fixpassword.pug
+  // code
+  include ./_modal/_code.pug 
+  // score
+  include ./_modal/_score.pug
+  
+    
+
+block append script
+  script(type="text/javascript" src="../js/btn_action.js")
+
+  //功能JS
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+
+  // js
+  script(type="text/javascript" src='../js/variable.js')
+  script(type="text/javascript" src='../js/asyn.js')
+  script(type="text/javascript" src='../js/presentAccount.js')
+  script(type="text/javascript" src='../js/modalControl.js')
+  script(type="text/javascript" src='../js/fullScreen.js')
+  script(type="text/javascript" src='../js/logout.js')
+  script(type="text/javascript" src='../js/autoLogout.js')
+  script(type="text/javascript" src='../js/marquee.js')
+  script(type="text/javascript" src='../js/slider.js')
+  script(type="text/javascript" src='../js/login.js')
+  script(type="text/javascript" src='../js/gameClass.js')
+  script(type="text/javascript" src='../js/complain.js')
+  script(type="text/javascript" src='../js/fixpassword.js')
+  script(type="text/javascript" src='../js/code.js')
+  script(type="text/javascript" src='../js/getVersionNo.js')
+
+  

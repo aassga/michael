@@ -1,0 +1,43 @@
+#exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        div#exampleModalLongTitle.modal-title 問題回饋
+        div.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form(style='width:100%;')
+          // Default radio
+          .form-check
+            input#mail.form-check-input(type='radio', name='mail', value='游戏问题')
+            label.form-check-label(for='flexRadioDefault1')
+              | 游戏问题
+          .form-check
+            input#mail.form-check-input(type='radio', name='mail', value='代理欺骗')
+            label.form-check-label(for='flexRadioDefault1')
+              | 代理欺骗
+          .form-check
+            input#mail.form-check-input(type='radio', name='mail', value='登入不了')
+            label.form-check-label(for='flexRadioDefault1')
+              | 登入不了
+          .form-check
+            input#mail.form-check-input(type='radio', name='mail', value='代理投訴')
+            label.form-check-label(for='flexRadioDefault1')
+              | 代理投訴
+          .form-check
+            input#mail.form-check-input(type='radio', name='mail', value='其他')
+            label.form-check-label(for='flexRadioDefault1')
+              | 其他
+          br
+          // Message input
+          .form-outline
+            textarea#info.form-message(placeholder='問題內容', rows='4', name='info')
+            .form-notch
+              .form-notch-leading(style='width: 9px;')
+              .form-notch-middle(style='width: 60px;')
+              .form-notch-trailing
+          // phone input
+          .form-outline
+            input#tel.form-control(type='text', placeholder='連絡電話', name='連絡電話')
+          // Submit button
+          button#send.btn.btn-primary(type='button') 送出
